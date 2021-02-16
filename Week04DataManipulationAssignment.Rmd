@@ -76,14 +76,25 @@ You can get the R code for most of the analyses you do in Jamovi.
     + You may need to change the name of the dataset to match the name of the data frame in RStudio. data = week3 (or the name of your data frame)
     
 ```{r}
-
+jmv::descriptives(
+    data = dataset,
+    vars = vars(height, weight),
+    hist = TRUE,
+    box = TRUE,
+    sd = TRUE,
+    range = TRUE)
 
 ```
 
 2. Copy the code block for the descriptive statistics for the continuous variables and run it here in RStudio.
 
 ```{r}
-
+jmv::descriptives(
+    data = dataset,
+    vars = vars(lvst1, lvst2, lvst3, lvst4),
+    bar = TRUE,
+    sd = FALSE,
+    range = TRUE)
 
 ```
 
